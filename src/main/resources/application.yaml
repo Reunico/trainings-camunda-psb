@@ -3,3 +3,6 @@ url: https://demo.reunico.com/faker/api/generate?property=name.findName&property
 camunda.bpm.admin-user:
   id: demo
   password: demo
+camunda:
+  bpm:
+    default-serialization-format: "application/json"
