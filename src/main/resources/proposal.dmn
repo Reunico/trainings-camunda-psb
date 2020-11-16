@@ -30,7 +30,7 @@
       </rule>
       <rule id="DecisionRule_0084rby">
         <inputEntry id="UnaryTests_08jijj1">
-          <text></text>
+          <text>"RU"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0eren1b">
           <text></text>
@@ -39,7 +39,91 @@
           <text>false</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0j40bqp">
+          <text>"vodka"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pn68k2">
+        <inputEntry id="UnaryTests_1r4bw53">
+          <text>"UK"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ft35jj">
           <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10i8eh3">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ok6ik1">
+          <text>"fish_and_chips"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ufhmzh">
+        <inputEntry id="UnaryTests_1b522js">
+          <text>"JP"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ov1pf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_067usej">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s84dcf">
+          <text>"sushi"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dmk353">
+        <inputEntry id="UnaryTests_1d6r9jn">
+          <text>"TR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1avmjfp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_151whcm">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rgc1l6">
+          <text>"kebab"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ckyufo">
+        <inputEntry id="UnaryTests_04lzr9n">
+          <text>"FR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gba7lm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02frgrq">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ihn4fs">
+          <text>"wine"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04ddi5p">
+        <inputEntry id="UnaryTests_018mpql">
+          <text>"IT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06mwypf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qgfg0s">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ewnfa">
+          <text>"pasta"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07c6klc">
+        <inputEntry id="UnaryTests_1fr7zlx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13jndd7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17rgkko">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0axz2j3">
+          <text>"sandwich"</text>
         </outputEntry>
       </rule>
     </decisionTable>
