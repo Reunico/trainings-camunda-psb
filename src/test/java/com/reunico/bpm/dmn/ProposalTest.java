@@ -1,8 +1,10 @@
 package com.reunico.bpm.dmn;
 
 import com.reunico.bpm.constant.DmnDefinitionConstants;
+import com.reunico.bpm.constant.DmnResultConstants;
 import com.reunico.bpm.constant.ProcessVariableConstants;
 import com.reunico.bpm.domain.Customer;
+import org.apache.tomcat.jni.Proc;
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.junit.Assert;
@@ -35,7 +37,7 @@ public class ProposalTest {
                 processEngine
                         .getDecisionService().evaluateDecisionTableByKey(DmnDefinitionConstants.PROPOSAL, variables);
         Map<String, Object> dmnResult = result.getSingleResult();
-        Assert.assertTrue((Boolean) dmnResult.get(DmnDefinitionConstants.IS_PERSONAL));
+        Assert.assertTrue((Boolean) dmnResult.get(DmnResultConstants.IS_PERSONAL));
     }
 
     @Test
@@ -49,7 +51,7 @@ public class ProposalTest {
                 processEngine
                         .getDecisionService().evaluateDecisionTableByKey(DmnDefinitionConstants.PROPOSAL, variables);
         Map<String, Object> dmnResult = result.getSingleResult();
-        Assert.assertFalse((Boolean) dmnResult.get(DmnDefinitionConstants.IS_PERSONAL));
+        Assert.assertFalse((Boolean) dmnResult.get(DmnResultConstants.IS_PERSONAL));
 
     }
 }
