@@ -17,30 +17,45 @@
     <bpmn:endEvent id="EndEvent_0x6ir2l">
       <bpmn:incoming>Flow_0yn1y14</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="SequenceFlow_16gzt2m" sourceRef="getCustomer" targetRef="Activity_0242mu6" />
+    <bpmn:sequenceFlow id="SequenceFlow_16gzt2m" sourceRef="getCustomer" targetRef="Activity_1tbqice" />
     <bpmn:serviceTask id="getCustomer" name="Получить данные клиента из реестра" camunda:delegateExpression="${ getCustomer }">
       <bpmn:incoming>SequenceFlow_1fp17al</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_16gzt2m</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_0yn1y14" sourceRef="Activity_0242mu6" targetRef="EndEvent_0x6ir2l" />
     <bpmn:userTask id="Activity_0242mu6" name="Проверить данные клиента">
-      <bpmn:incoming>SequenceFlow_16gzt2m</bpmn:incoming>
+      <bpmn:incoming>Flow_18frj6p</bpmn:incoming>
       <bpmn:outgoing>Flow_0yn1y14</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0yn1y14" sourceRef="Activity_0242mu6" targetRef="EndEvent_0x6ir2l" />
+    <bpmn:sequenceFlow id="Flow_18frj6p" sourceRef="Activity_1tbqice" targetRef="Activity_0242mu6" />
+    <bpmn:businessRuleTask id="Activity_1tbqice" name="Подобрать предложение" camunda:resultVariable="proposal" camunda:decisionRef="proposal" camunda:mapDecisionResult="singleResult">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="isPersonal">${ decisionResult.getSingleResult().isPersonal }</camunda:outputParameter>
+          <camunda:outputParameter name="proposal">${ decisionResult.getSingleResult().proposal }</camunda:outputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_16gzt2m</bpmn:incoming>
+      <bpmn:outgoing>Flow_18frj6p</bpmn:outgoing>
+    </bpmn:businessRuleTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="psb-process">
       <bpmndi:BPMNEdge id="SequenceFlow_16gzt2m_di" bpmnElement="SequenceFlow_16gzt2m">
         <di:waypoint x="370" y="117" />
-        <di:waypoint x="410" y="117" />
+        <di:waypoint x="470" y="117" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1fp17al_di" bpmnElement="SequenceFlow_1fp17al">
         <di:waypoint x="215" y="117" />
         <di:waypoint x="270" y="117" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0yn1y14_di" bpmnElement="Flow_0yn1y14">
-        <di:waypoint x="510" y="117" />
-        <di:waypoint x="552" y="117" />
+        <di:waypoint x="780" y="117" />
+        <di:waypoint x="822" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18frj6p_di" bpmnElement="Flow_18frj6p">
+        <di:waypoint x="570" y="117" />
+        <di:waypoint x="680" y="117" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="99" width="36" height="36" />
@@ -49,10 +64,13 @@
         <dc:Bounds x="270" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_0x6ir2l_di" bpmnElement="EndEvent_0x6ir2l">
-        <dc:Bounds x="552" y="99" width="36" height="36" />
+        <dc:Bounds x="822" y="99" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0xt0pkm_di" bpmnElement="Activity_0242mu6">
-        <dc:Bounds x="410" y="77" width="100" height="80" />
+        <dc:Bounds x="680" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_08a3bqf_di" bpmnElement="Activity_1tbqice">
+        <dc:Bounds x="470" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
