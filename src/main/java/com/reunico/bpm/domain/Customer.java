@@ -22,6 +22,11 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
+    public Customer(BigDecimal amount, String countryCode) {
+        this.amount = amount;
+        this.countryCode = countryCode;
+    }
+
     public String getFullName() {
         return fullName;
     }

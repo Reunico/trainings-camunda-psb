@@ -12,11 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class GetCustomer implements JavaDelegate {
 
-    private PublicService publicService;
-
-
-    public GetCustomer() {
-    }
+    private final PublicService publicService;
 
     public GetCustomer(PublicService publicService) {
         this.publicService = publicService;
@@ -31,13 +27,5 @@ public class GetCustomer implements JavaDelegate {
             } else {
                 delegateExecution.setVariable(ProcessVariableConstants.CUSTOMER, customer);
             }
-    }
-
-    public PublicService getPublicService() {
-        return publicService;
-    }
-
-    public void setPublicService(PublicService publicService) {
-        this.publicService = publicService;
     }
 }

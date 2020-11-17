@@ -5,4 +5,5 @@ public interface ProcessVariableConstants {
     String CUSTOMER = "customer";
     String IS_PERSONAL = "isPersonal";
     String PROPOSAL = "proposal";
+    String IS_FAILED = "isFailed";
 }

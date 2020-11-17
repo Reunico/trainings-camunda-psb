@@ -60,11 +60,9 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-loader-tools:2.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.3.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.10" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.uuid:java-uuid-generator:3.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.camunda.bpm:camunda-engine-rest-jaxrs2:7.14.0" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.3" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.11.0" level="project" />
@@ -137,7 +135,6 @@
     <orderEntry type="library" name="Maven: org.junit.vintage:junit-vintage-engine:5.6.2" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-engine:1.6.2" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
     <orderEntry type="library" name="Maven: org.mockito:mockito-core:3.3.3" level="project" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.10.11" level="project" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-agent:1.10.11" level="project" />
@@ -178,5 +175,14 @@
     <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
     <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.camunda.bpm:camunda-engine-plugin-spin:7.14.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.camunda.bpm.extension:camunda-bpm-assert-scenario:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.camunda.bpm.extension:camunda-bpm-process-test-coverage:0.3.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hamcrest:hamcrest-library:2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
+    <orderEntry type="library" name="Maven: io.flowcov:flowcov-camunda-core:0.2.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
   </component>
 </module>

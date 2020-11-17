@@ -7,6 +7,8 @@ import org.camunda.connect.httpclient.HttpRequest;
 import org.camunda.connect.httpclient.HttpResponse;
 import org.camunda.spin.Spin;
 import org.camunda.spin.json.SpinJsonNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,8 @@ public class PublicService {
     @Value("${url}")
     private String url;
 
+    private Logger logger = LoggerFactory.getLogger(NotificationService.class);
+
     public Customer getCustomerById(Long number) {
         Customer customer = null;
         HttpConnector httpConnector = Connectors.getConnector(HttpConnector.ID);
@@ -32,7 +36,7 @@ public class PublicService {
         if (response.getStatusCode() == 200 && !response.getResponse().isEmpty()) {
             // SpinJsonNode node = Spin.JSON(response.getResponse());
             customer = Spin.JSON(response.getResponse()).mapTo(Customer.class);
-
+            logger.info(String.format("Customer: %s", customer));
         }
         return customer;
     }
